@@ -4,110 +4,16 @@
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1"> 
   <title>ZeeOXx eSports — Official</title> 
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="style.css">
   <meta name="description" content="ZeeOXx eSports — Competitive mobile gaming org for BGMI, Free Fire &amp; VALORANT Mobile."> 
   <link rel="preconnect" href="https://fonts.googleapis.com"> 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"> 
-  <style>
-    :root{
-      --bg:#0a0a0b;        /* base black */
-      --card:#111114;      /* card bg */
-      --muted:#9aa0a6;     /* muted grey */
-      --border:#232327;    /* borders */
-      --acc:#e11d48;       /* red */
-      --acc-2:#2563eb;     /* blue */
-      --ring:rgba(37,99,235,.25);
-      --round:18px;
-      --shadow:0 8px 30px rgba(0,0,0,.35);
-      --max:1200px;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; color:#fff; background:
-      radial-gradient(60% 60% at 50% 0%, rgba(37,99,235,.10), transparent 60%) ,
-      var(--bg);
-      line-height:1.6;
-    }
-    a{color:inherit; text-decoration:none}
-    img{max-width:100%; display:block}
-    .container{max-width:var(--max); margin-inline:auto; padding:0 16px}
-    .btn{display:inline-flex; align-items:center; gap:8px; padding:10px 16px; border-radius:16px; border:1px solid var(--border); background:#18181b; color:#fff; font-weight:600}
-    .btn.primary{background:linear-gradient(135deg,var(--acc),#b91c1c); border-color:transparent}
-    .btn:hover{filter:brightness(1.05)}
-    .badge{display:inline-flex; align-items:center; gap:6px; padding:6px 10px; border-radius:999px; font-size:12px; font-weight:700; background:rgba(37,99,235,.12); color:#cfe0ff}
-    .card{background:var(--card); border:1px solid var(--border); border-radius:var(--round); box-shadow:var(--shadow)}
-    .section{position:relative; padding:80px 0}
-    .eyebrow{display:inline-block; margin-bottom:10px; padding:6px 10px; font-size:12px; font-weight:700; border-radius:999px; background:rgba(37,99,235,.12); color:#cfe0ff}
-    h1,h2,h3{line-height:1.2; margin:0}
-    h2{font-size:32px}
-    .muted{color:var(--muted)}
-    .grid{display:grid; gap:18px}
-    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-
-    /* ——— Navbar ——— */
-    .nav{position:sticky; top:0; z-index:100; backdrop-filter:blur(8px); background:rgba(10,10,11,.72); border-bottom:1px solid var(--border)}
-    .nav .row{display:flex; align-items:center; justify-content:space-between; padding:14px 16px}
-    .brand{display:flex; align-items:center; gap:10px}
-    .logo{width:40px; height:40px; border-radius:14px; padding:2px; background:linear-gradient(135deg,#ef4444,#0b0b0e 50%,#2563eb)}
-    .logo > span{display:grid; place-items:center; width:100%; height:100%; background:#000; border-radius:12px; font-weight:900}
-    .nav a.link{font-weight:600; color:#c9c9cf}
-    .nav a.link:hover{color:#fff}
-    .nav .links{display:none; gap:22px}
-    .menu-btn{display:inline-flex; background:none; color:#fff; border:0}
-    .drawer{display:none; border-top:1px solid var(--border); background:#0d0d10}
-    .drawer a{display:block; padding:12px; border-bottom:1px solid var(--border)}
-
-    /* ——— Hero ——— */
-    .hero{position:relative; overflow:hidden}
-    .hero .bgfx::before, .hero .bgfx::after{
-      content:""; position:absolute; filter:blur(90px); opacity:.35; pointer-events:none
-    }
-    .hero .bgfx::before{left:-60px; top:-60px; width:280px; height:280px; border-radius:50%; background:var(--acc)}
-    .hero .bgfx::after{right:-40px; top:0; width:280px; height:280px; border-radius:50%; background:var(--acc-2)}
-    .hero-wrap{display:grid; gap:30px; padding:80px 0}
-    .hero h1{font-size:44px}
-    .hero .socials{display:flex; flex-wrap:wrap; gap:12px}
-    .chip{display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border-radius:999px; background:#121216; border:1px solid var(--border); font-size:13px}
-
-    /* ——— Cards layouts ——— */
-    .card .head{padding:18px 18px 0}
-    .card .body{padding:0 18px 18px; color:var(--muted); font-size:14px}
-    .card .foot{padding:0 18px 18px}
-
-    /* ——— Creators grid ——— */
-    .creator-card{display:flex; flex-direction:column; align-items:center; text-align:center; padding:18px; border-radius:14px}
-    .creator-avatar{width:96px; height:96px; border-radius:999px; object-fit:cover; margin-bottom:12px}
-    .platform-links{display:flex; gap:8px; margin-top:8px}
-
-    /* ——— Live embeds ——— */
-    .embed{border-radius:12px; overflow:hidden; border:1px solid var(--border)}
-
-    /* ——— Forms ——— */
-    .form{display:grid; gap:14px}
-    .field{display:grid; gap:8px}
-    label{font-size:14px; font-weight:700}
-    input,textarea,select{width:100%; padding:12px 12px; border-radius:12px; border:1px solid var(--border); background:#0e0e12; color:#fff; outline:none}
-    input:focus,textarea:focus,select:focus{border-color:var(--acc-2); box-shadow:0 0 0 4px var(--ring)}
-    textarea{min-height:110px; resize:vertical}
-
-    /* ——— Footer ——— */
-    footer{border-top:1px solid var(--border)}
-
-    /* ——— Responsive ——— */
-    @media (min-width:768px){
-      .nav .links{display:flex}
-      .menu-btn{display:none}
-      .drawer{display:none !important}
-      .hero-wrap{grid-template-columns:1.1fr .9fr; align-items:center}
-      .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-      .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-    }
-  </style> 
- </head> 
+  
+</head> 
  <body> <!-- —— NAVBAR —— --> 
-  <nav style="display:flex; justify-content:space-between; align-items:center; padding:12px 24px; background:#0a0a0a;"> <!-- Logo (left) --> <a href="#" style="display:flex; align-items:center; gap:8px; text-decoration:none; color:#fff; font-weight:600; font-size:18px;"> <img src="https://cdn.discordapp.com/attachments/1373848110459256842/1409906710553825382/IMG_20250826_195534.png?ex=68af1572&amp;is=68adc3f2&amp;hm=c0624a452a3fdae78dd2e93f4cecc3b25081aa82428baf73a83dd9277ceab47a&amp;" alt="ZeeOXx Logo" style="height:40px; border-radius:8px;"> </a> <!-- Menu (right) --> 
+  <nav style="display:flex; justify-content:space-between; align-items:center; padding:12px 24px; background:#0a0a0a;"> <!-- Logo (left) --> <a href="/" style="display:flex; align-items:center; gap:8px; text-decoration:none; color:#fff; font-weight:600; font-size:18px;"> <img src="https://cdn.discordapp.com/attachments/1373848110459256842/1409906710553825382/IMG_20250826_195534.png?ex=68af1572&amp;is=68adc3f2&amp;hm=c0624a452a3fdae78dd2e93f4cecc3b25081aa82428baf73a83dd9277ceab47a&amp;" alt="ZeeOXx Logo" style="height:40px; border-radius:8px;"> </a> <!-- Menu (right) --> 
    <div style="display:flex; gap:18px;"> <a href="#about" style="color:#fff; text-decoration:none;">About</a> <a href="#teams" style="color:#fff; text-decoration:none;">Teams</a> <a href="#creators" style="color:#fff; text-decoration:none;">Creators</a> <a href="#contact" style="color:#fff; text-decoration:none;">Contact</a> 
    </div> 
   </nav> <!-- ——— HERO ——— --> 
@@ -117,15 +23,15 @@
     <div> <span class="badge">India • Since 2024</span> 
      <h1 style="margin-top:10px">ZeeOXx eSports <span class="muted" style="display:block; font-size:.72em; font-weight:600"> </span>#RiseWithZeeOXx</h1> 
      <p class="muted" style="margin-top:12px">Competitive mobile gaming org fielding squads in BGMI, Free Fire, and VALORANT Mobile. Built by players, for players.</p> 
-     <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap"> <a class="btn primary" href="#join" data-link>▶ Join the Roster</a> <a class="btn" href="#teams" data-link>🎮 Explore Teams</a> 
+     <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap"> <a class="btn primary" href="#join" data-link> Join the Roster</a> <a class="btn" href="#teams" data-link> Explore Teams</a> 
      </div> 
-     <div class="socials" style="margin-top:16px"> <!-- TODO replace with real links --> <a class="chip" href="https://instagram.com/zeeoxx_esports" target="_blank" rel="noreferrer">📸 Instagram</a> <a class="chip" href="https://youtube.com/@zeeoxxesportsandcreative?si=grVfRx0jjaOaMupl" target="_blank" rel="noreferrer">▶ YouTube</a> <a class="chip" href="https://discord.gg/6UCxTGSFdj" target="_blank" rel="noreferrer">💬 Discord</a> <a class="chip" href="mailto:zeeoxxesports@gmail.com">✉ Email</a> 
+     <div class="socials" style="margin-top:16px"> <!-- TODO replace with real links --> <a class="chip" href="https://instagram.com/zeeoxx_esports" target="_blank" rel="noreferrer"> Instagram</a> <a class="chip" href="https://youtube.com/@zeeoxxesportsandcreative?si=grVfRx0jjaOaMupl" target="_blank" rel="noreferrer"> YouTube</a> <a class="chip" href="https://discord.gg/6UCxTGSFdj" target="_blank" rel="noreferrer"> Discord</a> <a class="chip" href="mailto:zeeoxxesports@gmail.com"> Email</a> 
      </div> 
     </div> 
     <div> 
      <div class="card" style="overflow:hidden; position:relative"> 
       <div style="position:absolute; right:12px; top:12px; font-size:12px; background:rgba(255,255,255,.06); padding:6px 10px; border-radius:999px;">
-        ▶ Live Clips 
+         Live Clips 
       </div> 
       <img alt="ZeeOXx montage banner" src="https://cdn.discordapp.com/attachments/1373848110459256842/1407569599003889744/20231018_165040.jpg?ex=68ae7dd7&amp;is=68ad2c57&amp;hm=bb075195002a8c027a98d1071be8cf6bc396348f9a61379e39f3007b4bf6d37b&amp;"> 
      </div> 
@@ -137,12 +43,12 @@
     <div class="eyebrow">
       Who we are 
     </div> 
-    <h2>Competitive. Creative. Community‑first.</h2> 
-    <p class="muted" style="max-width:780px; margin-top:8px">Founded by Spidey Playz, ZeeOXx blends sweat‑drip gameplay with crisp branding from ZeeOXx Creatives.</p> 
+    <h2>Competitive. Creative. Communityfirst.</h2> 
+    <p class="muted" style="max-width:780px; margin-top:8px">Founded by Spidey Playz, ZeeOXx blends sweatdrip gameplay with crisp branding from ZeeOXx Creatives.</p> 
     <div class="grid grid-3" style="margin-top:18px"> 
      <div class="card"> 
       <div class="head"> 
-       <h3>🏆 Competitive Vision</h3> 
+       <h3> Competitive Vision</h3> 
       </div> 
       <div class="body">
         Scrims, leagues, and community tournaments with a focus on discipline, clear comms, and smart rotations. 
@@ -150,7 +56,7 @@
      </div> 
      <div class="card"> 
       <div class="head"> 
-       <h3>👥 Player‑First Culture</h3> 
+       <h3> PlayerFirst Culture</h3> 
       </div> 
       <div class="body">
         Growth paths for talent across IGL, entry, support, content, and staff roles. Healthy grind, healthy mind. 
@@ -158,10 +64,10 @@
      </div> 
      <div class="card"> 
       <div class="head"> 
-       <h3>🛡 Fair Play &amp; Security</h3> 
+       <h3> Fair Play &amp; Security</h3> 
       </div> 
       <div class="body">
-        Anti‑toxicity, anti‑cheat, and zero tolerance for violations. Logged, moderated, and transparent. 
+        Antitoxicity, anticheat, and zero tolerance for violations. Logged, moderated, and transparent. 
       </div> 
      </div> 
     </div> 
@@ -180,7 +86,7 @@
        <h3>BGMI <span class="chip" style="margin-left:8px">Mobile</span></h3> 
       </div> 
       <div class="body">
-        Tier‑2 scrims &amp; tournaments 
+        Tier2 scrims &amp; tournaments 
       </div> 
       <div class="foot"> <a class="btn" href="#join" data-link>Apply for BGMI</a> 
       </div> 
@@ -246,8 +152,7 @@
        </div> <!-- Creator application form --> 
        <div class="card" style="margin-top:24px; padding:18px; max-width:900px; margin-left:auto; margin-right:auto"> 
         <h3 class="font-semibold mb-3">Join as a Creator</h3> 
-        <form id="creatorForm" class="form" /f/xjkevoqb"> 
-        <form action="https://formspree.io/f/xjkevoqb" method="POST">
+        <form id="creatorForm" class="form" f xjkevoqb"> 
          <div class="grid grid-2"> 
           <div class="field"> <label>Creator Name</label> 
            <input name="name" required placeholder="e.g., Spidey Playz"> 
@@ -283,7 +188,7 @@
          <div class="badge" style="background:rgba(34,197,94,.12); color:#86efac">
            Application received 
          </div> 
-         <p class="muted" style="margin-top:8px">Thanks! We’ll review and reach out within 3 business days. Join our Discord for faster replies.</p> <a class="btn" style="margin-top:10px" href="https://discord.gg/6UCxTGSFdj" target="_blank" rel="noreferrer">💬 Join Discord</a> 
+         <p class="muted" style="margin-top:8px">Thanks! We’ll review and reach out within 3 business days. Join our Discord for faster replies.</p> <a class="btn" style="margin-top:10px" href="https://discord.gg/6UCxTGSFdj" target="_blank" rel="noreferrer"> Join Discord</a> 
         </div> 
        </div> 
       </div> 
@@ -297,9 +202,8 @@
        <p class="muted" style="max-width:780px; margin-top:8px">Fill the quick form and we’ll reach out on Discord/Email.</p> 
        <div class="card" style="margin-top:18px; padding:18px"> 
         <form id="applyForm" class="form"> 
-          <form action="https://formspree.io/f/xjkevoqb" method="POST">
          <div class="grid grid-2"> 
-          <div class="field"> <label>In‑Game Name</label> 
+          <div class="field"> <label>InGame Name</label> 
            <input name="ign" required placeholder="e.g., Spidey"> 
           </div> 
           <div class="field"> <label>Game</label> 
@@ -324,7 +228,7 @@
          </div> 
          <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap"> 
           <div class="muted" style="font-size:12px">
-            By applying you agree to fair‑play and anti‑toxicity rules. 
+            By applying you agree to fairplay and antitoxicity rules. 
           </div> <button class="btn primary" type="submit">Submit</button> 
          </div> 
         </form> 
@@ -332,7 +236,7 @@
          <div class="badge" style="background:rgba(34,197,94,.12); color:#86efac">
            Application sent 
          </div> 
-         <p class="muted" style="max-width:520px; margin:8px auto 0">Thanks! We’ll ping you on Discord or email within 48 hours. Meanwhile, join our Discord for faster updates.</p> <a class="btn" style="margin-top:10px" href="https://discord.gg/6UCxTGSFdj" target="_blank" rel="noreferrer">💬 Join Discord</a> 
+         <p class="muted" style="max-width:520px; margin:8px auto 0">Thanks! We’ll ping you on Discord or email within 48 hours. Meanwhile, join our Discord for faster updates.</p> <a class="btn" style="margin-top:10px" href="https://discord.gg/6UCxTGSFdj" target="_blank" rel="noreferrer"> Join Discord</a> 
         </div> 
        </div> 
       </div> 
@@ -346,15 +250,15 @@
        <p class="muted" style="max-width:780px; margin-top:8px">We’re open for brand deals, scrim hosting, and creator collabs.</p> 
        <div class="grid grid-2" style="margin-top:18px"> 
         <div class="card" style="padding:18px"> 
-         <h3>✨ ZeeOXx Creatives</h3> 
+         <h3> ZeeOXx Creatives</h3> 
          <p class="muted">Design • Branding • Motion</p> 
-         <div style="margin-top:10px"> <a class="btn" href="#contact" data-link>Sponsor Us →</a> 
+         <div style="margin-top:10px"> <a class="btn" href="#contact" data-link>Sponsor Us </a> 
          </div> 
         </div> 
         <div class="card" style="padding:18px"> 
-         <h3>⭐ Your Brand?</h3> 
+         <h3> Your Brand?</h3> 
          <p class="muted">Become a sponsor</p> 
-         <div style="margin-top:10px"> <a class="btn" href="#contact" data-link>Sponsor Us →</a> 
+         <div style="margin-top:10px"> <a class="btn" href="#contact" data-link>Sponsor Us </a> 
          </div> 
         </div> 
        </div> 
@@ -370,14 +274,13 @@
        <div class="grid grid-2" style="margin-top:18px"> 
         <div class="card" style="padding:18px"> 
          <h3>DM or Email us</h3> 
-         <p class="muted">Official email: <a href="mailto:zeeoxxesports@gmail.com" style="text-decoration:underline; font-size:13px;" color:#fff">zeeoxxesports@gmail.com</a></p> 
-         <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:8px"> <a class="chip" href="https://instagram.com/zeeoxx_esports" target="_blank" rel="noreferrer">📸 Instagram</a> <a class="chip" href="https://youtube.com/@zeeoxxesportsandcreative?si=grVfRx0jjaOaMupl" target="_blank" rel="noreferrer">▶ YouTube</a> <a class="chip" href="https://discord.gg/6UCxTGSFdj" target="_blank" rel="noreferrer">💬 Discord</a> <a class="chip" href="mailto:zeeoxxesports@gmail.com">✉ Email</a> 
+         <p class="muted">Official email: <a href="mailto:zeeoxxesports@gmail.com" style="text-decoration:underline; color:#fff">zeeoxxesports@gmail.com</a></p> 
+         <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:8px"> <a class="chip" href="https://instagram.com/zeeoxx_esports" target="_blank" rel="noreferrer"> Instagram</a> <a class="chip" href="https://youtube.com/@zeeoxxesportsandcreative?si=grVfRx0jjaOaMupl" target="_blank" rel="noreferrer"> YouTube</a> <a class="chip" href="https://discord.gg/6UCxTGSFdj" target="_blank" rel="noreferrer"> Discord</a> <a class="chip" href="mailto:zeeoxxesports@gmail.com"> Email</a> 
          </div> 
         </div> 
         <div class="card" style="padding:18px"> 
          <h3>Quick message</h3> 
          <form id="contactForm" class="form"> 
-           <form action="https://formspree.io/f/xjkevoqb" method="POST">
           <div class="field"> <label>Your Name</label> 
            <input required placeholder="e.g., Tournament Host"> 
           </div> 
@@ -405,60 +308,10 @@
        </div> 
       </div> 
      </footer> 
-     <script>
-    // Smooth scroll for all [data-link]
-    document.querySelectorAll('[data-link]').forEach(a=>{
-      a.addEventListener('click', (e)=>{
-        const href=a.getAttribute('href');
-        if(href && href.startsWith('#')){ e.preventDefault(); document.querySelector(href)?.scrollIntoView({behavior:'smooth', block:'start'}); }
-        // close drawer on click
-        document.getElementById('drawer')?.classList.remove('open');
-        document.getElementById('drawer').style.display='none';
-      });
-    });
-
-    // Mobile menu
-    const menuBtn=document.getElementById('menuBtn');
-    const drawer=document.getElementById('drawer');
-    menuBtn?.addEventListener('click',()=>{
-      const open = drawer.style.display==='block';
-      drawer.style.display = open ? 'none' : 'block';
-    });
-
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Apply form (front-end only)
-    const applyForm=document.getElementById('applyForm');
-    const applySuccess=document.getElementById('applySuccess');
-    applyForm?.addEventListener('submit', (e)=>{
-      e.preventDefault();
-      applyForm.style.display='none';
-      applySuccess.style.display='block';
-    });
-
-    // Contact form (front-end only)
-    const contactForm=document.getElementById('contactForm');
-    const contactSuccess=document.getElementById('contactSuccess');
-    contactForm?.addEventListener('submit', (e)=>{
-      e.preventDefault();
-      contactForm.style.display='none';
-      contactSuccess.style.display='block';
-    });
-
-    // Creator form
-    const creatorForm = document.getElementById('creatorForm');
-    const creatorSuccess = document.getElementById('creatorSuccess');
-    creatorForm?.addEventListener('submit',(e)=>{
-      e.preventDefault();
-      creatorForm.style.display='none';
-      creatorSuccess.style.display='block';
-    });
-  </script> 
     </div> 
    </div> 
   </section> 
+    <!-- Link JS (at end of body for faster loading) -->
+    	  <script src="script.js"></script>
  </body>
-</html>
-
-
+ </html>
